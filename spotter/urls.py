@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.routers import DefaultRouter
+
+from spotterapi.views.auth import login_user, register_user
+
+router = DefaultRouter(trailing_slash = False)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login', login_user),
+    path('register', register_user)
 ]

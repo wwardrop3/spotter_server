@@ -1,0 +1,32 @@
+[
+    {
+        "model": "spotterapi.exercise",
+        "pk": 1,
+        "fields": {
+            "name": "Barbell Bench Press",
+            "machine": 1,
+            "body_part": 2,
+            "type": 1
+        }
+    },
+    {
+        "model": "spotterapi.exercise",
+        "pk": 2,
+        "fields": {
+            "name": "Smith Machine Bench Press",
+            "machine": 2,
+            "body_part": 2,
+            "type": 1
+        }
+    },
+    {
+        "model": "spotterapi.exercise",
+        "pk": 3,
+        "fields": {
+            "name": "Leg Curl",
+            "machine": 3,
+            "body_part": 1,
+            "type": 1
+        }
+    }
+]
