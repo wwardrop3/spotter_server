@@ -68,8 +68,7 @@ def register_user(request):
         bio=request.data['bio'],
         user=new_user,
         profile_image_url = request.data['profile_image_url'],
-        created_on = datetime.datetime.now(),
-        active = True,
+        created_on = datetime.datetime.now()
 
     )
 

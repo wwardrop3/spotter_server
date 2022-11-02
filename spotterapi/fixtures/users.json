@@ -4,7 +4,6 @@
         "pk": 1,
         "fields": {
             "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
-            "last_login": null,
             "is_superuser": false,
             "username": "will",
             "first_name": "will",
@@ -22,7 +21,6 @@
         "pk": 2,
         "fields": {
             "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
-            "last_login": null,
             "is_superuser": false,
             "username": "bob",
             "first_name": "bob",
@@ -39,7 +37,6 @@
         "pk": 3,
         "fields": {
             "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
-            "last_login": null,
             "is_superuser": false,
             "username": "carl",
             "first_name": "carl",

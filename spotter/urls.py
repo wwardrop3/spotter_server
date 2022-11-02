@@ -13,17 +13,26 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django import urls
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
 from spotterapi.views.auth import login_user, register_user
+from spotterapi.views.exercise_view import ExerciseView
+from spotterapi.views.session_view import SessionView
+from spotterapi.views.plan_view import PlanView
+
 
 router = DefaultRouter(trailing_slash = False)
 
+router.register(r'exercises', ExerciseView, "exercise")
+router.register(r'sessions', SessionView, "session")
+router.register(r'plans', PlanView, "plan")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login', login_user),
-    path('register', register_user)
+    path('register', register_user),
+    path('', include(router.urls))
 ]

@@ -8,3 +8,24 @@ class Exercise(models.Model):
     
     
     
+    # When an exercise is called, want to pull stats related to the exercise and the user or plan
+    
+    @property
+    def avg_weight(self):
+        return self.__avg_weight
+    
+    @avg_weight.setter
+    def avg_weight(self, value):
+        self.avg_weight = value
+    
+    
+    
+    # this shows the count of all the exercises////temporary
+    @property
+    def count(self):
+        return self.__count
+    def count (self, value):
+        self.count = value
+    
+    
+    

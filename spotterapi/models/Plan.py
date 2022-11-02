@@ -1,7 +1,18 @@
 from django.db import models
 
-from spotterapi.models.Exercise import Exercise
+
 
 class Plan(models.Model):
-    name = models.TextField()
-    exercises = models.ManyToManyField(Exercise, through = "PlanExercise")
+    profile = models.ForeignKey("Profile", on_delete = models.CASCADE)
+    exercises = models.ManyToManyField("Exercise", through = "PlanExercise")
+    start_date = models.DateTimeField()
+    public = models.BooleanField(False)
+    
+    
+
+    @property
+    def plan_sessions(self):
+        return self.__plan_sessions
+    @plan_sessions.setter
+    def plan_sessions(self, value):
+        self.plan_sessions = value
