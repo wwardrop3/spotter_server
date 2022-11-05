@@ -7,6 +7,7 @@ class Plan(models.Model):
     exercises = models.ManyToManyField("Exercise", through = "PlanExercise")
     start_date = models.DateTimeField()
     public = models.BooleanField(False)
+    stand_alone = models.BooleanField(False)
     
     
 
@@ -15,4 +16,4 @@ class Plan(models.Model):
         return self.__plan_sessions
     @plan_sessions.setter
     def plan_sessions(self, value):
-        self.plan_sessions = value
+        self.__plan_sessions = value

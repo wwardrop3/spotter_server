@@ -1,22 +1,15 @@
 from rest_framework.serializers import ModelSerializer
-
+from spotterapi.serializers.session_exercise_serializer import SessionExerciseSerializer
 from spotterapi.models.Session import Session
-from spotterapi.models.Profile import Profile
+from spotterapi.serializers.exercise_serializer import ExerciseSerializer
 
 class SessionSerializer(ModelSerializer):
     
-    profile = Profile()
     
+
     class Meta:
         model = Session
-        fields = ("id", "profile", "start_date", "plan")
+        fields = ("id", "start_date", "exercises", "session_exercises")
+        depth = 1
 
         
-        
-class GetSessionSerializer:
-    
-    profile = Profile()
-    
-    class Meta:
-        model = Session
-        fields = ("id", "profile", "start_date", "plan", "exercises")

@@ -22,6 +22,7 @@ from spotterapi.views.auth import login_user, register_user
 from spotterapi.views.exercise_view import ExerciseView
 from spotterapi.views.session_view import SessionView
 from spotterapi.views.plan_view import PlanView
+from spotterapi.views.profile_view import ProfileView
 
 
 router = DefaultRouter(trailing_slash = False)
@@ -29,6 +30,7 @@ router = DefaultRouter(trailing_slash = False)
 router.register(r'exercises', ExerciseView, "exercise")
 router.register(r'sessions', SessionView, "session")
 router.register(r'plans', PlanView, "plan")
+router.register(r'profiles', ProfileView, "plan")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

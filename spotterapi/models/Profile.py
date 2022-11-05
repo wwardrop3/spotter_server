@@ -8,4 +8,11 @@ class Profile(models.Model):
     profile_image_url = models.TextField()
     active = models.BooleanField(True)
     
+    @property
+    def profile_plans(self):
+        return self.__profile_plans
+    @profile_plans.setter
+    def profile_plans(self, value):
+        self.profile_plans = value
+    
     

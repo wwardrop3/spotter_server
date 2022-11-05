@@ -1,12 +1,11 @@
 
-from rest_framework.serializers import Serializer
-from models.SessionExercise import SessionExercise
-from models.Session import Session
+from rest_framework.serializers import ModelSerializer
+from spotterapi.models.SessionExercise import SessionExercise
 
-class SessionExerciseSerializer(Serializer):
+class SessionExerciseSerializer(ModelSerializer):
     
-    session = Session()
-    
+
     class Meta:
         model = SessionExercise
         fields = ("id", "reps", "weight", "exercise", "session", "sets")
+        depth = 1

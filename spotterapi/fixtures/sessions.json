@@ -3,9 +3,7 @@
         "model": "spotterapi.session",
         "pk": 1,
         "fields": {
-            "profile": 1,
             "start_date": "2022-05-18 11:33:31.353462",
-            "from_plan": "True",
             "plan": 1
         }
     },
@@ -13,9 +11,7 @@
         "model": "spotterapi.session",
         "pk": 2,
         "fields": {
-            "profile": 1,
             "start_date": "2022-06-18 11:33:31.353462",
-            "from_plan": "True",
             "plan": 1
         }
     },
@@ -23,9 +19,7 @@
         "model": "spotterapi.session",
         "pk": 3,
         "fields": {
-            "profile": 1,
             "start_date": "2022-06-18 11:33:31.353462",
-            "from_plan": "True",
             "plan": 2
         }
     },
@@ -33,9 +27,7 @@
         "model": "spotterapi.session",
         "pk": 4,
         "fields": {
-            "profile": 1,
             "start_date": "2022-09-18 11:33:31.353462",
-            "from_plan": "True",
             "plan": 3
         }
     }
